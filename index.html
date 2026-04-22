@@ -1140,7 +1140,7 @@
           Physics-based climate models have been the cornerstone of climate prediction for decades, but they are costly to simulate, these global simulations can take days to weeks on high-performance clusters. This project intends to find whether machine learning can serve as a high-efficiency helper, replicating and extending the predictive performance of traditional solvers.
         </p>
         <p>
-          Training on various datasets of global surface temperature anomalies, atmospheric CO₂ concentrations, and ocean circulation indices, multiple ML architectures are evaluated against physics-based benchmarks. Results demonstrate that neural networks achieve lower prediction error, capture nonlinear cross-variable dependencies, and reduce inference time by an order of magnitude, establishing a strong empirical basis for hybrid ML–physics modeling frameworks.
+          Training on various datasets of global surface temperature anomalies, atmospheric CO₂ concentrations, and ocean circulation indices, multiple ML architectures are evaluated against physics-based benchmarks. Results demonstrate that neural networks achieve lower prediction error, capture nonlinear cross-variable dependencies, and reduce inference time much better, giving a strong argument for hybrid ML–physics modeling frameworks.
         </p>
       </div>
     </div>
@@ -1172,7 +1172,7 @@
         </div>
 
         <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:18px;">
-          All three time series were temporally aligned to a common monthly grid. The preprocessing pipeline standardizes each variable to zero mean and unit variance, removes seasonality via differencing, and segments the data into overlapping windows for supervised sequence modeling.
+          All three time series were temporally aligned to a common monthly grid. The preprocessing pipeline standardizes each variable to zero mean and unit variance, removes seasonality by differencing, and segments the data into overlapping windows for supervised sequence modeling.
         </p>
 
         <div style="margin-bottom:8px;font-family:var(--mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);">Processing Pipeline</div>
@@ -1212,7 +1212,7 @@
           Methodology
         </h3>
         <p style="color:var(--text-muted);font-size:0.92rem;margin-bottom:20px;line-height:1.75;">
-          Four model families were trained and evaluated: a regularized linear regression baseline, gradient-boosted trees, a fully-connected feedforward network, and an LSTM-based recurrent architecture optimized for sequential climate data. Each was compared against a physics-based baseline derived from energy balance equations.
+          Four models were trained and evaluated: a regularized linear regression baseline, gradient-boosted trees, a fully-connected feedforward network, and an LSTM-based recurrent architecture optimized for sequential climate data. Each was compared against a physics-based baseline derived from energy balance equations.
         </p>
         <div class="method-list">
           <div class="method-item">Linear Regression with L2 regularization — interpretable baseline, captures linear forcing relationships.</div>
@@ -1252,7 +1252,7 @@
         </div>
 
         <p style="color:var(--text-muted);font-size:0.92rem;margin-bottom:24px;line-height:1.75;">
-          The LSTM architecture achieved the strongest performance across all metrics, with neural networks consistently outperforming the physics-based baseline in both prediction accuracy and computational efficiency. Gradient boosted trees closed much of the gap despite their shallower inductive bias, suggesting that even lightweight ML models offer meaningful improvements over physics-only approaches. The inference speedup of roughly 10× opens the door to ensemble forecasting and uncertainty quantification that would be prohibitively expensive with traditional solvers.
+          The LSTM architecture achieved the strongest performance across all metrics, with neural networks consistently outperforming the physics-based baseline in both prediction accuracy and computational efficiency. Gradient boosted trees closed much of the gap despite their shallower inductive bias, showing that even lightweight ML models offer improvements over exclusively physics-based approaches.
         </p>
 
         <!-- CHARTS -->
@@ -1328,11 +1328,11 @@
         <div class="takeaways">
           <div class="takeaways-title">⬡ Key Takeaways</div>
           <ul class="takeaways-list">
-            <li>Neural networks (especially LSTMs) outperform physics-based baselines on prediction accuracy across all evaluation metrics on held-out climate data.</li>
+            <li>Neural networks outperform physics-based baselines on prediction accuracy on held-out climate data.</li>
             <li>ML models capture complex nonlinear interactions between temperature, CO₂, and ocean circulation indices that simpler physical models cannot represent without extensive parameterization.</li>
-            <li>Inference time is reduced by approximately 10× relative to the energy balance baseline, enabling real-time forecasting and large-ensemble uncertainty quantification.</li>
-            <li>ML models exhibit better alignment to observed temperature trajectories, suggesting they learn empirically grounded representations of forcing dynamics.</li>
-            <li>A hybrid ML–physics architecture is the most promising direction: using ML as a fast surrogate for computationally expensive subcomponents while preserving physical constraints in the outer loop.</li>
+            <li>Inference time is reduced by approximately 10×.</li>
+            <li>ML models exhibit better alignment to observed temperature trajectories.</li>
+            <li>A hybrid ML–physics architecture is the most promising direction: using ML as a fast replacement for computationally expensive subcomponents while preserving physical constraints in the outer loop.</li>
           </ul>
         </div>
       </div>
@@ -1344,10 +1344,10 @@
           Conclusion
         </h3>
         <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;margin-bottom:16px;">
-          This project demonstrates that machine learning — and deep learning in particular — offers a viable and efficient complement to traditional climate simulation. The improvements in prediction accuracy and inference speed are not incremental; they represent a qualitative shift in what's computationally tractable for ensemble forecasting and real-time analysis.
+          This project demonstrates that machine learning offers a viable, and efficient, complement to traditional climate simulation. The improvements in prediction accuracy and inference speed represent a qualitative shift in what's computationally manageable for ensemble forecasting and real-time analysis.
         </p>
         <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;">
-          The most compelling direction forward is the integration of ML surrogates into hybrid model architectures, where physics-based equations constrain the high-level dynamics and data-driven modules handle computationally expensive subprocesses. This synergy preserves the interpretability and physical grounding of traditional models while unlocking the speed and pattern-recognition capacity of neural networks — a necessary step for next-generation climate prediction systems.
+          The most exciting direction forward is the integration of ML into hybrid model architectures, where physics-based equations constrain the high-level dynamics and data-driven modules handle computationally expensive subprocesses. The combination of these preserves the interpretability and physical grounding of traditional models while also getting the speed and pattern-recognition capacity of neural networks.
         </p>
       </div>
 
@@ -1364,7 +1364,7 @@
         <h2 style="font-family:var(--serif);font-size:1.7rem;margin-bottom:20px;line-height:1.2;">Academic &amp;<br/>Professional Record</h2>
         <p>My CV covers undergraduate coursework in ML and systems, research experience, and relevant technical projects. Updated for the current academic year.</p>
         <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px;">
-          <a href="CV.pdf" download class="btn btn-primary" style="width:fit-content;">⬇ Download PDF</a>
+          <a href="CV_f.pdf" download class="btn btn-primary" style="width:fit-content;">⬇ Download PDF</a>
         </div>
       </div>
       <div>
@@ -1387,14 +1387,12 @@
             </div>
             <div class="mock-section">
               <div class="mock-section-title">Technical Skills</div>
-              <div class="mock-subtitle">Python, TensorFlow, PyTorch, Git</div>
-              <div class="mock-line w60"></div>
+              <div class="mock-subtitle">Python, SciKit-Learn, TensorFlow, Git</div>
             </div>
             <div class="mock-section">
               <div class="mock-section-title">Projects</div>
-              <div class="mock-line w90"></div>
-              <div class="mock-line w80"></div>
-              <div class="mock-line w40"></div>
+              <div class="mock-subtitle">Climate Data Analysis Tool</div>
+              <div class="mock-subtitle">Personal Website</div>
             </div>
           </div>
           <div class="cv-preview-label">Preview · cv.pdf</div>
