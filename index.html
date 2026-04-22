@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content="ML researcher and CS undergraduate specializing in climate modeling and machine learning."/>
 <meta name="keywords" content="machine learning, climate modeling, research, computer science, neural networks"/>
-<title>Alex Chen — ML Researcher</title>
+<title>Charlie Copp — ML Researcher</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
@@ -702,6 +702,8 @@
     border-radius: var(--radius-lg);
     padding: 28px 32px;
     margin-top: 32px;
+    margin-bottom: 32px;
+    grid-column: 1 / -1;
   }
 
   .takeaways-title {
@@ -1013,7 +1015,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#home" class="nav-brand">Alex Chen</a>
+  <a href="#home" class="nav-brand">Charlie Copp</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#research">Research</a></li>
@@ -1031,14 +1033,14 @@
   <div class="hero-grid"></div>
   <div class="container hero-content">
     <div class="hero-tag">CS Undergraduate Researcher · ML &amp; Climate Systems</div>
-    <h1 class="hero-name">Alex <em>Chen</em></h1>
+    <h1 class="hero-name">Charlie <em>Copp</em></h1>
     <p class="hero-tagline">
       I apply machine learning to problems in climate science — developing data-driven methods that complement and accelerate physics-based modeling.
     </p>
     <div class="hero-actions">
       <a href="#research" class="btn btn-primary">View Research →</a>
-      <a href="#cv" class="btn btn-secondary">Download CV</a>
-      <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      <a href="#cv" class="btn btn-primary">Download CV</a>
+      <a href="#contact" class="btn btn-primary">Get in Touch</a>
     </div>
     <div class="hero-meta">
       <div class="hero-stat">
@@ -1067,13 +1069,13 @@
           Building ML systems for<br/>real-world impact.
         </h2>
         <p>
-          I'm an undergraduate researcher in Computer Science with a focus on applied machine learning. My work sits at the intersection of <strong>deep learning, time series analysis, and environmental science</strong>, with a current emphasis on improving the efficiency and accuracy of climate simulations.
+          I'm an undergraduate researcher in Computer Science with a focus on applied machine learning. My work aims to mix <strong>deep learning, time series analysis, and environmental science</strong>, with an emphasis on improving the efficiency and accuracy of climate simulations.
         </p>
         <p>
-          Climate models are among the most computationally intensive simulations in science. My research explores whether <strong>data-driven approaches can capture the nonlinear dynamics</strong> of Earth's climate systems at a fraction of the computational cost — and how ML models can be best integrated with existing physics-based frameworks.
+          Climate models are some of the most computationally intensive simulations in science. My research explores whether <strong>data-driven approaches can capture the nonlinear dynamics</strong> of Earth's climate systems at a lower computational cost, and how ML models can be best integrated with existing physics-based frameworks.
         </p>
         <p>
-          I work with publicly available datasets from <strong>NASA and NOAA</strong>, building preprocessing pipelines and training neural networks to match and extend the predictive power of traditional solvers.
+          I work with publicly available datasets from <strong>NASA and NOAA</strong>, building preprocessing pipelines and training neural networks to match and extend the predictive power of traditionally used solvers.
         </p>
       </div>
       <div class="about-stack">
@@ -1135,10 +1137,10 @@
 
       <div class="abstract-card">
         <p>
-          Physics-based climate models have been the cornerstone of climate prediction for decades, but their fidelity comes at significant computational cost — global simulations can take days to weeks on high-performance clusters. This project investigates whether machine learning can serve as a high-efficiency surrogate, replicating and extending the predictive performance of traditional solvers.
+          Physics-based climate models have been the cornerstone of climate prediction for decades, but they are costly to simulate, these global simulations can take days to weeks on high-performance clusters. This project intends to find whether machine learning can serve as a high-efficiency helper, replicating and extending the predictive performance of traditional solvers.
         </p>
         <p>
-          Training on multivariate time series of global surface temperature anomalies, atmospheric CO₂ concentrations, and ocean circulation indices, multiple ML architectures — from linear baselines to deep neural networks — are evaluated against physics-based benchmarks. Results demonstrate that neural networks achieve lower prediction error, capture nonlinear cross-variable dependencies, and reduce inference time by an order of magnitude, establishing a strong empirical basis for hybrid ML–physics modeling frameworks.
+          Training on various datasets of global surface temperature anomalies, atmospheric CO₂ concentrations, and ocean circulation indices, multiple ML architectures are evaluated against physics-based benchmarks. Results demonstrate that neural networks achieve lower prediction error, capture nonlinear cross-variable dependencies, and reduce inference time by an order of magnitude, establishing a strong empirical basis for hybrid ML–physics modeling frameworks.
         </p>
       </div>
     </div>
@@ -1166,11 +1168,6 @@
             <div class="data-card-label">Argo / NOAA</div>
             <div class="data-card-title">Ocean Circulation</div>
             <div class="data-card-sub">AMO, ENSO indices</div>
-          </div>
-          <div class="data-card">
-            <div class="data-card-label">Derived</div>
-            <div class="data-card-title">Lagged Features</div>
-            <div class="data-card-sub">Cross-variable lags, rolling stats</div>
           </div>
         </div>
 
@@ -1300,43 +1297,6 @@
             </div>
           </div>
 
-          <div class="chart-box">
-            <div class="chart-title">Prediction Error Comparison (RMSE)</div>
-            <div class="chart-canvas-wrap" style="gap:14px;padding:0 10px 8px;align-items:flex-end;">
-              <!-- Physics baseline -->
-              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;">
-                <div class="bar bar-phys" style="height:140px;width:100%"></div>
-                <div style="font-family:var(--mono);font-size:0.6rem;color:var(--text-dim);text-align:center;">EBM<br/>Baseline</div>
-              </div>
-              <!-- Linear -->
-              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;">
-                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;">
-                  <div class="bar bar-ml" style="height:100px;width:100%;align-self:flex-end;margin-top:40px;"></div>
-                  <div style="font-family:var(--mono);font-size:0.6rem;color:var(--text-dim);text-align:center;">Linear<br/>Reg.</div>
-                </div>
-              </div>
-              <!-- XGBoost -->
-              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;">
-                <div class="bar bar-ml" style="height:80px;width:100%;align-self:flex-end;margin-top:60px;"></div>
-                <div style="font-family:var(--mono);font-size:0.6rem;color:var(--text-dim);text-align:center;">XGBoost</div>
-              </div>
-              <!-- MLP -->
-              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;">
-                <div class="bar bar-ml" style="height:65px;width:100%;align-self:flex-end;margin-top:75px;"></div>
-                <div style="font-family:var(--mono);font-size:0.6rem;color:var(--text-dim);text-align:center;">MLP</div>
-              </div>
-              <!-- LSTM -->
-              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;">
-                <div class="bar bar-hybrid" style="height:46px;width:100%;align-self:flex-end;margin-top:94px;"></div>
-                <div style="font-family:var(--mono);font-size:0.6rem;color:var(--green);text-align:center;font-weight:500;">LSTM ★</div>
-              </div>
-            </div>
-            <div class="chart-legend">
-              <div class="legend-item"><span class="legend-dot" style="background:var(--bg-3);border:1px solid var(--border-strong)"></span>Physics</div>
-              <div class="legend-item"><span class="legend-dot" style="background:var(--accent)"></span>ML Models</div>
-              <div class="legend-item"><span class="legend-dot" style="background:var(--green)"></span>Best</div>
-            </div>
-          </div>
 
           <div class="chart-box">
             <div class="chart-title">Predicted vs. Observed Temperature</div>
@@ -1363,32 +1323,6 @@
             </div>
           </div>
 
-          <div class="chart-box">
-            <div class="chart-title">Inference Time (seconds)</div>
-            <div class="chart-canvas-wrap" style="gap:14px;padding:0 10px 8px;align-items:flex-end;">
-              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;">
-                <div class="bar" style="background:linear-gradient(180deg,#fbbf24,rgba(251,191,36,0.5));height:130px;width:100%;"></div>
-                <div style="font-family:var(--mono);font-size:0.6rem;color:var(--text-dim);text-align:center;">Physics<br/>EBM</div>
-              </div>
-              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;">
-                <div class="bar bar-ml" style="height:24px;width:100%;align-self:flex-end;margin-top:106px;"></div>
-                <div style="font-family:var(--mono);font-size:0.6rem;color:var(--text-dim);text-align:center;">XGBoost</div>
-              </div>
-              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;">
-                <div class="bar bar-ml" style="height:16px;width:100%;align-self:flex-end;margin-top:114px;"></div>
-                <div style="font-family:var(--mono);font-size:0.6rem;color:var(--text-dim);text-align:center;">MLP</div>
-              </div>
-              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;">
-                <div class="bar bar-hybrid" style="height:13px;width:100%;align-self:flex-end;margin-top:117px;"></div>
-                <div style="font-family:var(--mono);font-size:0.6rem;color:var(--green);text-align:center;">LSTM</div>
-              </div>
-            </div>
-            <div class="chart-legend">
-              <div class="legend-item"><span class="legend-dot" style="background:var(--amber)"></span>Baseline (slow)</div>
-              <div class="legend-item"><span class="legend-dot" style="background:var(--green)"></span>ML (fast)</div>
-            </div>
-          </div>
-        </div>
 
         <!-- TAKEAWAYS -->
         <div class="takeaways">
@@ -1433,38 +1367,28 @@
           <a href="cv.pdf" download class="btn btn-primary" style="width:fit-content;">⬇ Download PDF</a>
           <a href="cv.pdf" target="_blank" rel="noopener" class="btn btn-secondary" style="width:fit-content;">↗ Open in New Tab</a>
         </div>
-        <div style="margin-top:32px;padding:16px 18px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);">
-          <div style="font-family:var(--mono);font-size:0.68rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">Highlights</div>
-          <div class="method-list">
-            <div class="method-item" style="font-size:0.85rem;">Undergraduate Research in ML &amp; Climate Science</div>
-            <div class="method-item" style="font-size:0.85rem;">Coursework: ML, Deep Learning, Linear Algebra, Statistics</div>
-            <div class="method-item" style="font-size:0.85rem;">Dean's List — GPA 3.8+</div>
-            <div class="method-item" style="font-size:0.85rem;">Open-source contributions in scientific Python</div>
-          </div>
-        </div>
       </div>
       <div>
         <div class="cv-preview">
           <div class="cv-preview-mock">
             <div class="mock-header">
-              <div class="mock-name">Alex Chen</div>
+              <div class="mock-name">Charlie Copp</div>
               <div class="mock-subtitle">Computer Science · Machine Learning Researcher</div>
-              <div style="margin-top:6px;font-family:var(--mono);font-size:0.65rem;color:var(--text-dim);">alex.chen@university.edu · github.com/alexchen</div>
+              <div style="margin-top:6px;font-family:var(--mono);font-size:0.65rem;color:var(--text-dim);">chco3382@colorado.edu · github.com/charlEOPP</div>
             </div>
             <div class="mock-section">
               <div class="mock-section-title">Education</div>
-              <div class="mock-line w90"></div>
-              <div class="mock-line w60"></div>
+              <div class="mock-subtitle">Bachelor of Science in Computer Science</div>
+              <div class="mock-subtitle">Coursework: ML, Deep Learning, Linear Algebra, Statistics</div>
             </div>
             <div class="mock-section">
               <div class="mock-section-title">Research Experience</div>
-              <div class="mock-line w90"></div>
-              <div class="mock-line w80"></div>
-              <div class="mock-line w70"></div>
+              <div class="mock-subtitle">Undergraduate Research in ML & Climate Science</div>
+              <div class="mock-subtitle">Open-source contributions in scientific Python</div>
             </div>
             <div class="mock-section">
               <div class="mock-section-title">Technical Skills</div>
-              <div class="mock-line w80"></div>
+              <div class="mock-subtitle">Python, TensorFlow, PyTorch, Git</div>
               <div class="mock-line w60"></div>
             </div>
             <div class="mock-section">
@@ -1472,11 +1396,6 @@
               <div class="mock-line w90"></div>
               <div class="mock-line w80"></div>
               <div class="mock-line w40"></div>
-            </div>
-            <div class="mock-section">
-              <div class="mock-section-title">Publications &amp; Presentations</div>
-              <div class="mock-line w80"></div>
-              <div class="mock-line w60"></div>
             </div>
           </div>
           <div class="cv-preview-label">Preview · cv.pdf</div>
@@ -1535,25 +1454,25 @@
           I'm actively looking for research internships, collaborations, and graduate school opportunities in machine learning and computational climate science. If you're working on related problems, I'd love to connect.
         </p>
         <div class="contact-links">
-          <a href="mailto:alex.chen@university.edu" class="contact-link">
+          <a href="mailto:.chco3382@colorado.edu" class="contact-link">
             <div class="contact-link-icon">✉</div>
             <div>
               <div class="contact-link-label">Email</div>
-              <div class="contact-link-sub">alex.chen@university.edu</div>
+              <div class="contact-link-sub">chco3382@colorado.edu</div>
             </div>
           </a>
           <a href="https://github.com" target="_blank" rel="noopener" class="contact-link">
             <div class="contact-link-icon">⌥</div>
             <div>
               <div class="contact-link-label">GitHub</div>
-              <div class="contact-link-sub">github.com/alexchen</div>
+              <div class="contact-link-sub">github.com/charlEOPP</div>
             </div>
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-link">
             <div class="contact-link-icon">↗</div>
             <div>
               <div class="contact-link-label">LinkedIn</div>
-              <div class="contact-link-sub">linkedin.com/in/alexchen</div>
+              <div class="contact-link-sub">linkedin.com/in/charlie-copp</div>
             </div>
           </a>
         </div>
@@ -1583,7 +1502,7 @@
 
 <footer>
   <div class="container">
-    <p>© 2024 Alex Chen · Built with clean HTML/CSS · <a href="#home">↑ Back to top</a></p>
+    <p>© 2026 Charlie Copp · Built with clean HTML/CSS · <a href="#home">↑ Back to top</a></p>
   </div>
 </footer>
 
